@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main() {
+    ll n;
+    cin >> n;
+    vector<ll> a(n);
+    for (ll i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    map<ll, ll> prefix_count;
+    ll prefix_sum = 0;
+    ll cnt = 0;
+    prefix_count[0] = 1;
+
+    for (ll i = 0; i < n; i++) {
+        prefix_sum += a[i];
+
+        if (prefix_count.find(prefix_sum) != prefix_count.end()) {
+            cnt += prefix_count[prefix_sum];
+        }
+
+        prefix_count[prefix_sum]++;
+    }
+
+    cout << cnt << endl;
+    return 0;
+}
