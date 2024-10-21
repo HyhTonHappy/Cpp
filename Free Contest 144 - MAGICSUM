@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+ll n;
+
+int main() {
+    cin >> n;
+    ll ans = 0;
+    while(n--){
+        ll l, r; cin >> l >> r;
+        ans += (r - l + 1) * (l + r) / 2;
+    }
+    cout << ans << endl;
+    return 0;
+}
