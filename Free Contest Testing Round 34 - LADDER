@@ -1,0 +1,40 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+bool check(const vector<int>& a, int l, int r) {
+    int peak = l;
+    while (peak < r && a[peak] <= a[peak + 1]) {
+        peak++;
+    }
+
+    while (peak < r && a[peak] >= a[peak + 1]) {
+        peak++;
+    }
+
+    return peak == r;
+}
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    vector<int> a(n + 1);
+
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+    }
+
+    for (int i = 0; i < m; i++) {
+        int l, r;
+        cin >> l >> r;
+
+        if (check(a, l, r)) {
+            cout << "Yes\n";
+        } else {
+            cout << "No\n";
+        }
+    }
+
+    return 0;
+}
