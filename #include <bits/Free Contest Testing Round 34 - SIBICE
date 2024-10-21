@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+bool check(ll a, ll x){
+return a >= x;
+}
+
+int main() {
+    ll n, w, h; cin >> n >> w >> h;
+    while(n--){
+        ll value; cin >> value;
+        if(check(sqrt(w * w + h*h), value)){
+            cout << "DA" << endl;
+        } else {
+            cout << "NE" << endl;
+        }
+    }
+
+    return 0;
+}
