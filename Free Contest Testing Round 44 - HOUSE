@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    vector<int> c(N);
+
+    for (int i = 0; i < N; i++) {
+        cin >> c[i];
+    }
+
+    int max_profit = INT_MIN; 
+    int max_price = c[0];     
+
+    for (int i = 1; i < N; i++) {
+        max_profit = max(max_profit, max_price - c[i]);
+
+        max_price = max(max_price, c[i]);
+    }
+
+    if (max_profit > 0) {
+        cout << max_profit << endl;
+    } else {
+        cout << "Lo nang roi!" << endl;
+    }
+
+    return 0;
+}
