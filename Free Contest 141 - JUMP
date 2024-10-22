@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define ll long long
+
+ll n;
+ll a[200005];
+
+
+
+int main() {
+cin >> n;
+ll left = 1, right = n;
+if(n % 2 == 0){
+    while(left <= right){
+        cout << left << " " << right << " ";
+        left++;
+        right--;
+    }
+} else {
+    while(left < right){
+        cout << left << " " << right << " ";
+        left++;
+        right--;
+    }
+    cout << n / 2 + 1;
+}
+}
