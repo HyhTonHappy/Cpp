@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define ii int
-#define ll long long
-#define str string
+
+typedef long long ll;
+typedef string str;
+typedef int ii;
+
 #define mod 1000000007
 #define PI 3.14159265358979323846
 #define INF INT_MAX
@@ -15,19 +17,23 @@ ll n;
 str s;
 
 void file (){
-    ifstream inp("check.inp");
-    ofstream out("check.out");
+    freopen("check.inp", "r", stdin);
+    freopen("check.out", "w", stdout);
 }
 
-void inp_file(){
-    // inp
+void input() {
+    
 }
 
-void out_file(){
-    // out
+void output() {
+    
 }
 
-int main() {
-   
+signed main() {
+    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+    // file();
+    // input();
+    // output();
+    
     return 0;
 }
